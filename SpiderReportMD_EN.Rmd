@@ -1,0 +1,35 @@
+```{r import, fig.show = "hide", warning=FALSE, echo = FALSE}
+load(".Rdata")
+```
+
+<center> <h3>Foreign Language Anxiety Report</h3> </center>
+<n></n>
+<center> <h5>`r firstname` `r lastname`</h5> </center>
+<n></n>
+
+The results of your survey are presented in the plot. For each category, your score is marked in red and is standardized with your classmates. The circle that is marked 50% is the average score across your class. Scores above the 50% mark mean higher foreign language anxiety and scores less than the 50% mark mean lower foreign language anxiety.
+
+```{r plot_gen, warning=FALSE, echo = FALSE}
+print(ggradar(case_spider, axis.label.size = 3.75, grid.label.size = 5, group.point.size = 3.5) + theme(legend.position = "none"))
+```
+<p style="font-size:10px">*Note:* An elevated anxiety score is not necessarily problematic, but may warrant a little bit of additional thought on how to work with it.</p>
+
+What are some specific behaviors that you can do to help someone who stuggles with `r textboxtext_s`?
+```{r text_box_s, warning=FALSE, echo = FALSE, fig.height=1.75, fig.width=9}
+ggplot(x=1:10, y = 1:10) + theme(panel.background = element_blank(),
+                                 panel.grid.major = element_blank(), 
+                                 panel.grid.minor = element_blank(),
+                                 axis.line = element_line(colour = "black"),
+                                 panel.border = element_rect(colour = "black", fill=NA, size=1))
+
+```
+
+What are some specific behaviors that others could do to help you with `r textboxtext_w`?
+```{r text_box_w, warning=FALSE, echo = FALSE, fig.height=1.75, fig.width=9}
+ggplot(x=1:10, y = 1:10) + theme(panel.background = element_blank(),
+                                 panel.grid.major = element_blank(), 
+                                 panel.grid.minor = element_blank(),
+                                 axis.line = element_line(colour = "black"),
+                                 panel.border = element_rect(colour = "black", fill=NA, size=1))
+
+```
