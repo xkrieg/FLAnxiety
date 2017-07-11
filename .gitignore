@@ -2,3 +2,12 @@
 .Rhistory
 .RData
 .Ruserdata
+*.DS_Store
+
+#Folders
+_data/
+_drafts/
+_images/
+_measures/
+_output/
+_resources/
